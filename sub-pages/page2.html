@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Page 2</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../style.css">
+        <script src="../script.js"></script>
+    </head>
+    <body class="strawberry-page page2-page">
+        <header class="strawberry-header">
+            <h1>BERRY BOOLEANS</h1>
+            <p>Hover and click the berries. Toggle to switch strawberries and blueberries.</p>
+
+            <div class="berry-toggle-row">
+                <label class="berry-toggle-label" for="page2-berry-toggle">
+                    <span class="berry-toggle-text">Strawberries</span>
+                    <span class="berry-toggle-switch">
+                        <input type="checkbox" id="page2-berry-toggle" checked />
+                        <span class="berry-toggle-slider" aria-hidden="true"></span>
+                    </span>
+                    <span class="berry-toggle-off-label">Blueberries</span>
+                </label>
+            </div>
+
+            <a class="link" href="../index.html">Go back to the main page</a>
+        </header>
+
+        <div id="page2-stage" class="page2-stage page2--strawberries">
+            <div class="strawberry-grid" role="group" aria-label="Strawberries">
+                <button type="button" class="strawberry strawberry-1" aria-label="Strawberry 1">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path class="strawberry-leaf" d="M50 8 L62 28 L78 18 L70 38 L88 42 L68 52 L50 48 L32 52 L12 42 L30 38 L22 18 L38 28 Z"/>
+                        <path class="strawberry-berry" d="M50 35 C28 35 12 58 12 82 C12 102 28 112 50 112 C72 112 88 102 88 82 C88 58 72 35 50 35 Z"/>
+                        <circle class="strawberry-seed" cx="38" cy="72" r="2.5"/>
+                        <circle class="strawberry-seed" cx="52" cy="65" r="2.5"/>
+                        <circle class="strawberry-seed" cx="62" cy="78" r="2.5"/>
+                        <circle class="strawberry-seed" cx="45" cy="88" r="2.5"/>
+                        <circle class="strawberry-seed" cx="58" cy="95" r="2.5"/>
+                    </svg>
+                </button>
+                <button type="button" class="strawberry strawberry-2" aria-label="Strawberry 2">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path class="strawberry-leaf" d="M50 8 L62 28 L78 18 L70 38 L88 42 L68 52 L50 48 L32 52 L12 42 L30 38 L22 18 L38 28 Z"/>
+                        <path class="strawberry-berry" d="M50 35 C28 35 12 58 12 82 C12 102 28 112 50 112 C72 112 88 102 88 82 C88 58 72 35 50 35 Z"/>
+                        <circle class="strawberry-seed" cx="38" cy="72" r="2.5"/>
+                        <circle class="strawberry-seed" cx="52" cy="65" r="2.5"/>
+                        <circle class="strawberry-seed" cx="62" cy="78" r="2.5"/>
+                        <circle class="strawberry-seed" cx="45" cy="88" r="2.5"/>
+                        <circle class="strawberry-seed" cx="58" cy="95" r="2.5"/>
+                    </svg>
+                </button>
+                <button type="button" class="strawberry strawberry-3" aria-label="Strawberry 3">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path class="strawberry-leaf" d="M50 8 L62 28 L78 18 L70 38 L88 42 L68 52 L50 48 L32 52 L12 42 L30 38 L22 18 L38 28 Z"/>
+                        <path class="strawberry-berry" d="M50 35 C28 35 12 58 12 82 C12 102 28 112 50 112 C72 112 88 102 88 82 C88 58 72 35 50 35 Z"/>
+                        <circle class="strawberry-seed" cx="38" cy="72" r="2.5"/>
+                        <circle class="strawberry-seed" cx="52" cy="65" r="2.5"/>
+                        <circle class="strawberry-seed" cx="62" cy="78" r="2.5"/>
+                        <circle class="strawberry-seed" cx="45" cy="88" r="2.5"/>
+                        <circle class="strawberry-seed" cx="58" cy="95" r="2.5"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="blueberry-grid" role="group" aria-label="Blueberries">
+                <button type="button" class="blueberry blueberry-1" aria-label="Blueberry 1">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle class="blueberry-berry" cx="50" cy="72" r="38"/>
+                        <circle class="blueberry-bloom" cx="38" cy="62" r="3"/>
+                        <circle class="blueberry-bloom" cx="58" cy="58" r="2.5"/>
+                        <circle class="blueberry-bloom" cx="48" cy="78" r="2.5"/>
+                        <circle class="blueberry-bloom" cx="62" cy="78" r="2"/>
+                        <circle class="blueberry-bloom" cx="35" cy="78" r="2"/>
+                        <path class="blueberry-crown" d="M50 22 L58 34 L72 30 L62 42 L74 52 L50 48 L26 52 L38 42 L28 30 L42 34 Z"/>
+                    </svg>
+                </button>
+                <button type="button" class="blueberry blueberry-2" aria-label="Blueberry 2">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle class="blueberry-berry" cx="50" cy="72" r="38"/>
+                        <circle class="blueberry-bloom" cx="38" cy="62" r="3"/>
+                        <circle class="blueberry-bloom" cx="58" cy="58" r="2.5"/>
+                        <circle class="blueberry-bloom" cx="48" cy="78" r="2.5"/>
+                        <circle class="blueberry-bloom" cx="62" cy="78" r="2"/>
+                        <circle class="blueberry-bloom" cx="35" cy="78" r="2"/>
+                        <path class="blueberry-crown" d="M50 22 L58 34 L72 30 L62 42 L74 52 L50 48 L26 52 L38 42 L28 30 L42 34 Z"/>
+                    </svg>
+                </button>
+                <button type="button" class="blueberry blueberry-3" aria-label="Blueberry 3">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle class="blueberry-berry" cx="50" cy="72" r="38"/>
+                        <circle class="blueberry-bloom" cx="38" cy="62" r="3"/>
+                        <circle class="blueberry-bloom" cx="58" cy="58" r="2.5"/>
+                        <circle class="blueberry-bloom" cx="48" cy="78" r="2.5"/>
+                        <circle class="blueberry-bloom" cx="62" cy="78" r="2"/>
+                        <circle class="blueberry-bloom" cx="35" cy="78" r="2"/>
+                        <path class="blueberry-crown" d="M50 22 L58 34 L72 30 L62 42 L74 52 L50 48 L26 52 L38 42 L28 30 L42 34 Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

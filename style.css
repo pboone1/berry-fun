@@ -1,0 +1,684 @@
+#container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+.home-title {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.home-title-letter--pink {
+    color: #ff1493;
+}
+
+.home-title-letter--blue {
+    color: #3949ab;
+}
+
+.home-title-space {
+    white-space: pre;
+}
+
+.container1 {
+    width: 100%;
+    height: 100%;
+    background-color: #ff0000;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s ease;
+}
+
+.color {
+    background-color: #00ff00;
+    border-radius: 10%;
+    width: 10%;
+    height: 10%;
+    transition: 2s ease;
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: regular;
+    margin: 10px;
+    padding: 4px 15px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Page 1 — strawberries */
+.strawberry-page {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #fff5f7 0%, #f0f0f0 45%);
+}
+
+.strawberry-header {
+    text-align: center;
+    padding: 1.5rem 1rem 0;
+}
+
+.strawberry-header h1 {
+    margin: 0 0 0.35rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #ff1493;
+}
+
+.strawberry-header p {
+    margin: 0 0 1rem;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.strawberry-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2.5rem 1rem 3rem;
+}
+
+.strawberry {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+}
+
+.strawberry svg {
+    width: min(28vw, 140px);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.12));
+    transition: filter 0.28s ease;
+}
+
+.strawberry .strawberry-berry {
+    fill: #e53935;
+    transition: fill 0.28s ease;
+}
+
+.strawberry .strawberry-leaf {
+    fill: #43a047;
+    transition: fill 0.28s ease;
+}
+
+.strawberry .strawberry-seed {
+    fill: #ffeb3b;
+    transition: fill 0.28s ease;
+}
+
+.strawberry:hover {
+    transform: scale(1.08) translateY(-4px);
+    filter: brightness(1.05);
+}
+
+.strawberry:hover svg {
+    filter: drop-shadow(0 10px 20px rgba(229, 57, 53, 0.35));
+}
+
+.strawberry:hover .strawberry-berry {
+    fill: #ff1744;
+}
+
+.strawberry:hover .strawberry-leaf {
+    fill: #66bb6a;
+}
+
+.strawberry:hover .strawberry-seed {
+    fill: #fff9c4;
+}
+
+/* Click: alternate palette per berry (toggle) */
+.strawberry-1.strawberry--active .strawberry-berry {
+    fill: #c2185b;
+}
+
+.strawberry-1.strawberry--active .strawberry-leaf {
+    fill: #00897b;
+}
+
+.strawberry-2.strawberry--active .strawberry-berry {
+    fill: #7b1fa2;
+}
+
+.strawberry-2.strawberry--active .strawberry-leaf {
+    fill: #388e3c;
+}
+
+.strawberry-3.strawberry--active .strawberry-berry {
+    fill: #d84315;
+}
+
+.strawberry-3.strawberry--active .strawberry-leaf {
+    fill: #2e7d32;
+}
+
+.strawberry-1.strawberry--active:hover .strawberry-berry {
+    fill: #ad1457;
+}
+
+.strawberry-2.strawberry--active:hover .strawberry-berry {
+    fill: #6a1b9a;
+}
+
+.strawberry-3.strawberry--active:hover .strawberry-berry {
+    fill: #bf360c;
+}
+
+/* Page 2 — strawberry / blueberry toggle */
+.blueberry-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2.5rem 1rem 3rem;
+}
+
+.page2-stage.page2--strawberries .blueberry-grid {
+    display: none;
+}
+
+.page2-stage.page2--blueberries .strawberry-grid {
+    display: none;
+}
+
+.berry-toggle-row {
+    margin: 0.75rem 0 1rem;
+}
+
+.berry-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.berry-toggle-text {
+    font-weight: 600;
+    color: #ff1493;
+}
+
+.berry-toggle-off-label {
+    font-weight: 600;
+    color: #3949ab;
+}
+
+.berry-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.berry-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.berry-toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: #c5cae9;
+    border-radius: 28px;
+    transition: background 0.25s ease;
+    border: 1px solid #9fa8da;
+}
+
+.berry-toggle-slider::before {
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 2px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.berry-toggle-switch input:checked + .berry-toggle-slider {
+    background: #f8bbd0;
+    border-color: #f48fb1;
+}
+
+.berry-toggle-switch input:checked + .berry-toggle-slider::before {
+    transform: translateX(24px);
+}
+
+.berry-toggle-switch input:focus-visible + .berry-toggle-slider {
+    outline: 2px solid #3949ab;
+    outline-offset: 2px;
+}
+
+.page2-page .strawberry-header h1 {
+    color: #ff1493;
+    transition: color 0.25s ease;
+}
+
+.page2-page.page2-title-blue .strawberry-header h1 {
+    color: #3949ab;
+}
+
+.blueberry {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+}
+
+.blueberry svg {
+    width: min(28vw, 140px);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.12));
+    transition: filter 0.28s ease;
+}
+
+.blueberry .blueberry-berry {
+    fill: #3949ab;
+    transition: fill 0.28s ease;
+}
+
+.blueberry .blueberry-crown {
+    fill: #2e7d32;
+    transition: fill 0.28s ease;
+}
+
+.blueberry .blueberry-bloom {
+    fill: rgba(255, 255, 255, 0.45);
+    transition: fill 0.28s ease;
+}
+
+.blueberry:hover {
+    transform: scale(1.08) translateY(-4px);
+    filter: brightness(1.06);
+}
+
+.blueberry:hover svg {
+    filter: drop-shadow(0 10px 20px rgba(57, 73, 171, 0.4));
+}
+
+.blueberry:hover .blueberry-berry {
+    fill: #5c6bc0;
+}
+
+.blueberry:hover .blueberry-crown {
+    fill: #43a047;
+}
+
+.blueberry:hover .blueberry-bloom {
+    fill: rgba(255, 255, 255, 0.75);
+}
+
+.blueberry-1.blueberry--active .blueberry-berry {
+    fill: #1a237e;
+}
+
+.blueberry-1.blueberry--active .blueberry-crown {
+    fill: #00695c;
+}
+
+.blueberry-2.blueberry--active .blueberry-berry {
+    fill: #283593;
+}
+
+.blueberry-2.blueberry--active .blueberry-crown {
+    fill: #388e3c;
+}
+
+.blueberry-3.blueberry--active .blueberry-berry {
+    fill: #311b92;
+}
+
+.blueberry-3.blueberry--active .blueberry-crown {
+    fill: #1b5e20;
+}
+
+.blueberry-1.blueberry--active:hover .blueberry-berry {
+    fill: #0d1642;
+}
+
+.blueberry-2.blueberry--active:hover .blueberry-berry {
+    fill: #1a237e;
+}
+
+.blueberry-3.blueberry--active:hover .blueberry-berry {
+    fill: #4527a0;
+}
+
+/* Page 3 — collapsible menu + berry viewer */
+.page3-page .page3-title {
+    color: #ff1493;
+}
+
+.page3-layout {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+}
+
+.page3-menu {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    margin-top: 1rem;
+    margin-bottom: 1.75rem;
+    overflow: hidden;
+}
+
+.page3-menu-summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 0.85rem 1.1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
+    border-bottom: 1px solid transparent;
+}
+
+.page3-menu[open] .page3-menu-summary {
+    border-bottom-color: #e0e0e0;
+}
+
+.page3-menu-summary::-webkit-details-marker {
+    display: none;
+}
+
+.page3-menu-summary::after {
+    content: "";
+    float: right;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: rotate(45deg);
+    margin-top: 0.35rem;
+    transition: transform 0.2s ease;
+}
+
+.page3-menu[open] .page3-menu-summary::after {
+    transform: rotate(-135deg);
+    margin-top: 0.55rem;
+}
+
+.page3-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0.35rem 0;
+}
+
+.page3-menu-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.65rem 1.1rem;
+    border: none;
+    background: #fff;
+    font: inherit;
+    font-size: 0.95rem;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.page3-menu-item:focus-visible {
+    outline: none;
+}
+
+.page3-menu-item[data-berry="strawberry"]:hover,
+.page3-menu-item[data-berry="strawberry"]:focus-visible {
+    background: #ffebee;
+    color: #e53935;
+}
+
+.page3-menu-item[data-berry="blueberry"]:hover,
+.page3-menu-item[data-berry="blueberry"]:focus-visible {
+    background: #e8eaf6;
+    color: #3949ab;
+}
+
+.page3-menu-item[data-berry="blackberry"]:hover,
+.page3-menu-item[data-berry="blackberry"]:focus-visible {
+    background: #ede7f6;
+    color: #311b92;
+}
+
+.page3-menu-item[data-berry="raspberry"]:hover,
+.page3-menu-item[data-berry="raspberry"]:focus-visible {
+    background: #fce4ec;
+    color: #c62828;
+}
+
+.page3-viewer {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px dashed #ddd;
+}
+
+.page3-placeholder {
+    margin: 0;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.page3-berry-panel {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.page3-svg {
+    width: min(55vw, 200px);
+    height: auto;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12));
+}
+
+.page3-straw-leaf {
+    fill: #43a047;
+}
+
+.page3-straw-berry {
+    fill: #e53935;
+}
+
+.page3-straw-seed {
+    fill: #ffeb3b;
+}
+
+.page3-blue-berry {
+    fill: #3949ab;
+}
+
+.page3-blue-crown {
+    fill: #2e7d32;
+}
+
+.page3-blue-bloom {
+    fill: rgba(255, 255, 255, 0.45);
+}
+
+.page3-bb-leaf {
+    fill: #2e7d32;
+}
+
+.page3-bb-drupe {
+    fill: #1a1a2e;
+}
+
+.page3-bb-drupe--d {
+    fill: #2d1b3d;
+}
+
+.page3-rasp-leaf {
+    fill: #43a047;
+}
+
+.page3-rasp-drupe {
+    fill: #e53935;
+}
+
+.page3-rasp-drupe--h {
+    fill: #c62828;
+}
+
+/* Page 4 — Berry Blast */
+.page4-page .page4-title {
+    color: #ff1493;
+    letter-spacing: 0.06em;
+}
+
+.page4-tagline {
+    margin: 0 0 1rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.page4-stage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem 1.5rem;
+    padding: 2rem 1rem 4rem;
+    min-height: 200px;
+}
+
+.page4-stage .page3-svg {
+    width: min(20vw, 96px);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.12));
+    transition: filter 0.28s ease;
+}
+
+.page4-berry {
+    transform-origin: center center;
+    cursor: pointer;
+    transition: transform 0.28s ease;
+}
+
+.page4-berry:hover {
+    transform: scale(1.22);
+}
+
+.page4-berry:hover .page3-svg {
+    filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.18));
+}
+
+.page4-berry:active {
+    transform: scale(0.96);
+}
+
+.page4-berry:hover:active {
+    transform: scale(1.1);
+}
+
+.page4-berry.page4-berry--pop {
+    animation: page4-pop-out 0.55s ease-out forwards;
+    pointer-events: none;
+    cursor: default;
+    transition: none;
+}
+
+.page4-berry.page4-berry--pop:hover,
+.page4-berry.page4-berry--pop:active,
+.page4-berry.page4-berry--pop:hover:active {
+    transform: none;
+}
+
+.page4-berry.page4-berry--gone {
+    display: none;
+}
+
+@keyframes page4-pop-out {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    35% {
+        transform: scale(1.4);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.1);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page4-berry {
+        transition: none;
+    }
+
+    .page4-berry:hover {
+        transform: none;
+    }
+
+    .page4-berry:active,
+    .page4-berry:hover:active {
+        transform: none;
+    }
+
+    .page4-berry.page4-berry--pop {
+        animation: page4-pop-out-reduced 0.35s ease-out forwards;
+    }
+
+    @keyframes page4-pop-out-reduced {
+        to {
+            opacity: 0;
+            transform: scale(1.05);
+        }
+    }
+}

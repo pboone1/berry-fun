@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Page 3</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../style.css">
+        <script src="../script.js"></script>
+    </head>
+    <body class="strawberry-page page3-page">
+        <header class="strawberry-header">
+            <h1 class="page3-title">PICK A BERRY</h1>
+            <p>Open the menu and choose a berry to see it here.</p>
+            <a class="link" href="../index.html">Go back to the main page</a>
+        </header>
+
+        <div class="page3-layout">
+            <details class="page3-menu">
+                <summary class="page3-menu-summary">Berries</summary>
+                <ul class="page3-menu-list">
+                    <li><button type="button" class="page3-menu-item" data-berry="strawberry">Strawberry</button></li>
+                    <li><button type="button" class="page3-menu-item" data-berry="blueberry">Blueberry</button></li>
+                    <li><button type="button" class="page3-menu-item" data-berry="blackberry">Blackberry</button></li>
+                    <li><button type="button" class="page3-menu-item" data-berry="raspberry">Raspberry</button></li>
+                </ul>
+            </details>
+
+            <div class="page3-viewer" id="page3-viewer" aria-live="polite">
+                <p class="page3-placeholder" id="page3-placeholder">Select a berry from the menu.</p>
+
+                <div class="page3-berry-panel" data-berry="strawberry">
+                    <svg class="page3-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strawberry">
+                        <path class="page3-straw-leaf" d="M50 8 L62 28 L78 18 L70 38 L88 42 L68 52 L50 48 L32 52 L12 42 L30 38 L22 18 L38 28 Z"/>
+                        <path class="page3-straw-berry" d="M50 35 C28 35 12 58 12 82 C12 102 28 112 50 112 C72 112 88 102 88 82 C88 58 72 35 50 35 Z"/>
+                        <circle class="page3-straw-seed" cx="38" cy="72" r="2.5"/>
+                        <circle class="page3-straw-seed" cx="52" cy="65" r="2.5"/>
+                        <circle class="page3-straw-seed" cx="62" cy="78" r="2.5"/>
+                        <circle class="page3-straw-seed" cx="45" cy="88" r="2.5"/>
+                        <circle class="page3-straw-seed" cx="58" cy="95" r="2.5"/>
+                    </svg>
+                </div>
+
+                <div class="page3-berry-panel" data-berry="blueberry">
+                    <svg class="page3-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blueberry">
+                        <circle class="page3-blue-berry" cx="50" cy="72" r="38"/>
+                        <circle class="page3-blue-bloom" cx="38" cy="62" r="3"/>
+                        <circle class="page3-blue-bloom" cx="58" cy="58" r="2.5"/>
+                        <circle class="page3-blue-bloom" cx="48" cy="78" r="2.5"/>
+                        <circle class="page3-blue-bloom" cx="62" cy="78" r="2"/>
+                        <circle class="page3-blue-bloom" cx="35" cy="78" r="2"/>
+                        <path class="page3-blue-crown" d="M50 22 L58 34 L72 30 L62 42 L74 52 L50 48 L26 52 L38 42 L28 30 L42 34 Z"/>
+                    </svg>
+                </div>
+
+                <div class="page3-berry-panel" data-berry="blackberry">
+                    <svg class="page3-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blackberry">
+                        <path class="page3-bb-leaf" d="M50 12 L60 28 L74 22 L66 36 L80 44 L64 50 L50 46 L36 50 L20 44 L34 36 L26 22 L40 28 Z"/>
+                        <circle class="page3-bb-drupe" cx="50" cy="68" r="13" />
+                        <circle class="page3-bb-drupe page3-bb-drupe--d" cx="36" cy="74" r="11" />
+                        <circle class="page3-bb-drupe page3-bb-drupe--d" cx="64" cy="74" r="11" />
+                        <circle class="page3-bb-drupe page3-bb-drupe--d" cx="50" cy="84" r="10" />
+                        <circle class="page3-bb-drupe page3-bb-drupe--d" cx="42" cy="58" r="9" />
+                        <circle class="page3-bb-drupe page3-bb-drupe--d" cx="58" cy="58" r="9" />
+                        <circle class="page3-bb-drupe page3-bb-drupe--d" cx="30" cy="82" r="9" />
+                        <circle class="page3-bb-drupe page3-bb-drupe--d" cx="70" cy="82" r="9" />
+                        <circle class="page3-bb-drupe page3-bb-drupe--d" cx="50" cy="54" r="8" />
+                    </svg>
+                </div>
+
+                <div class="page3-berry-panel" data-berry="raspberry">
+                    <svg class="page3-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Raspberry">
+                        <path class="page3-rasp-leaf" d="M50 12 L60 28 L74 22 L66 36 L80 44 L64 50 L50 46 L36 50 L20 44 L34 36 L26 22 L40 28 Z"/>
+                        <circle class="page3-rasp-drupe" cx="50" cy="68" r="13" />
+                        <circle class="page3-rasp-drupe page3-rasp-drupe--h" cx="36" cy="74" r="11" />
+                        <circle class="page3-rasp-drupe page3-rasp-drupe--h" cx="64" cy="74" r="11" />
+                        <circle class="page3-rasp-drupe page3-rasp-drupe--h" cx="50" cy="84" r="10" />
+                        <circle class="page3-rasp-drupe page3-rasp-drupe--h" cx="42" cy="58" r="9" />
+                        <circle class="page3-rasp-drupe page3-rasp-drupe--h" cx="58" cy="58" r="9" />
+                        <circle class="page3-rasp-drupe page3-rasp-drupe--h" cx="30" cy="82" r="9" />
+                        <circle class="page3-rasp-drupe page3-rasp-drupe--h" cx="70" cy="82" r="9" />
+                        <circle class="page3-rasp-drupe page3-rasp-drupe--h" cx="50" cy="54" r="8" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
